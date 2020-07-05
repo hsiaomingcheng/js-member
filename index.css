@@ -1,0 +1,31 @@
+.photoBy {
+    display: none;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.index-bg {
+    background: url('./assets/image/index-bg.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.member-wrap {
+    position: fixed;
+    border: solid 1px #CCC;
+    border-radius: 15px;
+    padding: 10px;
+    background: #FFF;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}

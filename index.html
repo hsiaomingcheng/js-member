@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員註冊登入 - member register & login</title>
+
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+
+<body>
+    <div class="photoBy">
+        <span>
+            Photo by
+            <a
+                href="https://unsplash.com/@bady?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">bady
+                abbas</a>
+            on
+            <a
+                href="https://unsplash.com/s/photos/flash?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+        </span>
+    </div>
+
+    <main class="index-bg">
+        <div class="member-wrap">
+            <div class="login-wrap">
+                <p>請登入會員</p>
+                <form action="">
+                    <div class="field-wrap">
+                        <label for="memeber-account">帳號</label>
+                        <input type="text" autocomplete="off" id="memeber-account">
+                    </div>
+
+                    <div class="field-wrap">
+                        <label for="memeber-password">密碼</label>
+                        <input type="text" autocomplete="off" id="memeber-password">
+                    </div>
+
+                    <input type="submit" id="login-submit" value="登入">
+                </form>
+            </div>
+
+            <div class="register-wrap">
+                <p>歡迎註冊</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
