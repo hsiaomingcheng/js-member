@@ -28,13 +28,13 @@
                 <p>請登入會員</p>
                 <form action="">
                     <div class="field-wrap">
-                        <label for="memeber-account">帳號</label>
-                        <input type="text" autocomplete="off" id="memeber-account">
+                        <label for="login-email">郵件帳號</label>
+                        <input type="email" autocomplete="off" id="login-email">
                     </div>
 
                     <div class="field-wrap">
-                        <label for="memeber-password">密碼</label>
-                        <input type="text" autocomplete="off" id="memeber-password">
+                        <label for="login-password">密碼</label>
+                        <input type="text" autocomplete="off" id="login-password">
                     </div>
 
                     <input type="submit" id="login-submit" value="登入">
@@ -43,6 +43,19 @@
 
             <div class="register-wrap">
                 <p>歡迎註冊</p>
+                <form action="">
+                    <div class="field-wrap">
+                        <label for="register-email">郵件帳號</label>
+                        <input type="email" autocomplete="off" id="register-email">
+                    </div>
+
+                    <div class="field-wrap">
+                        <label for="register-password">密碼</label>
+                        <input type="text" autocomplete="off" id="register-password">
+                    </div>
+
+                    <input type="submit" id="register-submit" value="確認註冊">
+                </form>
             </div>
         </div>
     </main>
@@ -50,6 +63,7 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
