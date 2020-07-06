@@ -16,16 +16,60 @@ p {
     width: 100vw;
     height: 100vh;
 }
-
-.member-wrap {
+.index-wrap {
     position: fixed;
-    border: solid 1px #CCC;
     border-radius: 15px;
-    padding: 10px;
     background: #FFF;
-    width: 300px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
+    overflow: hidden;
+}
+
+.category-wrap {
+    display: flex;
+}
+.category-button {
+    display: flex;
+    background: #656565;
+    width: 50%;
+    height: 40px;
+    color: #FFF;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: .5;
+}
+.category-button.active {
+    opacity: 1;
+}
+
+.member-wrap {
+    padding: 10px;
+    width: 300px;
+}
+.member-wrap-child.float {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.member-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.member-wrap label {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 80px;
+}
+.member-wrap input {
+    width: 184px;
+}
+.member-wrap .member-submit {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
 }

@@ -76,13 +76,36 @@
     }
 
     const handleOnload = function (assembleObj) {
-        var userRegister = assembleObj.handleUserRegister();
-        var userLogin = assembleObj.handleUserLogin();
+        const { handleUserRegister, handleUserLogin } = assembleObj;
+        const loginWrap = document.getElementsByClassName('login-wrap');
+        const registerWrap = document.getElementsByClassName('register-wrap');
+        const categoryButton = document.getElementsByClassName('category-button');
 
-        var apiObject = {
+        const apiObject = {
+            handleCategorySwitch: function () {
+                Array.prototype.forEach.call(categoryButton, function (element) {
+                    element.addEventListener('click', function () {
+                        Array.prototype.filter.call(element.parentNode.children, function (child) {
+                            child.classList.remove('active');
+                        });
+                        element.classList.add('active');
+
+                        if (this.getAttribute('id') === 'category-login') {
+                            registerWrap[0].classList.add('float');
+                            loginWrap[0].classList.remove('float');
+                        } else {
+                            loginWrap[0].classList.add('float');
+                            registerWrap[0].classList.remove('float');
+                        }
+                    });
+                });
+            },
             execute: function () {
-                userRegister.execute();
-                userLogin.execute();
+                handleUserRegister().execute();
+                handleUserLogin().execute();
+
+                //
+                this.handleCategorySwitch();
             }
         }
 

@@ -23,39 +23,45 @@
     </div>
 
     <main class="index-bg">
-        <div class="member-wrap">
-            <div class="login-wrap">
-                <p>請登入會員</p>
-                <form action="">
-                    <div class="field-wrap">
-                        <label for="login-email">郵件帳號</label>
-                        <input type="email" autocomplete="off" id="login-email">
-                    </div>
-
-                    <div class="field-wrap">
-                        <label for="login-password">密碼</label>
-                        <input type="text" autocomplete="off" id="login-password">
-                    </div>
-
-                    <input type="submit" id="login-submit" value="登入">
-                </form>
+        <div class="index-wrap">
+            <div class="category-wrap">
+                <p id="category-login" class="category-button active">登入</p>
+                <p id="category-register" class="category-button">註冊</p>
             </div>
+            <div class="member-wrap">
+                <div class="login-wrap member-wrap-child">
+                    <p class="member-title">請登入會員</p>
+                    <form action="">
+                        <div class="field-wrap">
+                            <label for="login-email">郵件帳號</label>
+                            <input type="email" autocomplete="off" id="login-email">
+                        </div>
 
-            <div class="register-wrap">
-                <p>歡迎註冊</p>
-                <form action="">
-                    <div class="field-wrap">
-                        <label for="register-email">郵件帳號</label>
-                        <input type="email" autocomplete="off" id="register-email">
-                    </div>
+                        <div class="field-wrap">
+                            <label for="login-password">密碼</label>
+                            <input type="text" autocomplete="off" id="login-password">
+                        </div>
 
-                    <div class="field-wrap">
-                        <label for="register-password">密碼</label>
-                        <input type="text" autocomplete="off" id="register-password">
-                    </div>
+                        <input type="submit" id="login-submit" class="member-submit" value="登入">
+                    </form>
+                </div>
 
-                    <input type="submit" id="register-submit" value="確認註冊">
-                </form>
+                <div class="register-wrap member-wrap-child float">
+                    <p class="member-title">歡迎註冊</p>
+                    <form action="">
+                        <div class="field-wrap">
+                            <label for="register-email">郵件帳號</label>
+                            <input type="email" autocomplete="off" id="register-email">
+                        </div>
+
+                        <div class="field-wrap">
+                            <label for="register-password">密碼</label>
+                            <input type="text" autocomplete="off" id="register-password">
+                        </div>
+
+                        <input type="submit" id="register-submit" class="member-submit" value="確認註冊">
+                    </form>
+                </div>
             </div>
         </div>
     </main>
