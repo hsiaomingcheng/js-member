@@ -14,8 +14,6 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 
-    const db = firebase.firestore();
-
     const handleUserRegister = function () {
         const registerSubmit = document.getElementById('register-submit');
         const registerEmail = document.getElementById('register-email');
@@ -32,10 +30,11 @@
 
                     firebase.auth().createUserWithEmailAndPassword(registerEmail.value, registerPassword.value)
                         .then(() => {
-                            console.log('成功');
+                            alert('恭喜 註冊成功');
                         })
                         .catch((error) => {
                             console.log(error.message);
+                            alert('抱歉 註冊失敗');
                         });
                 });
             }
@@ -62,12 +61,12 @@
                             const user = firebase.auth().currentUser;
 
                             if (user) {
-                                // User is signed in.
-                                console.log('login 成功', user);
+                                alert('恭喜 登入成功');
                             }
                         })
                         .catch((error) => {
                             console.log(error.message);
+                            alert('抱歉 登入失敗');
                         });
                 });
             }
@@ -121,16 +120,3 @@
 
     executeOnload.execute();
 })()
-
-
-//新增會員資料
-// db.collection('users').add({
-//     userAccount: memeberAccount.value,
-//     userPassword: memeberPassword.value,
-// })
-//     .then(function (docRef) {
-//         console.log('Document written with ID: ', docRef.id);
-//     })
-//     .catch(function (error) {
-//         console.error('Error adding document: ', error);
-//     });
